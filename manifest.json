@@ -1,0 +1,64 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.16",
+    "version": "1.0.0",
+    "id": "a7e48570-4fcd-4d8e-a2da-6b93aeb4075a",
+    "packageName": "com.example.supportchatbot",
+    "developer": {
+        "name": "Your Name",
+        "websiteUrl": "https://your-website.com",
+        "privacyUrl": "https://your-website.com/privacy",
+        "termsOfUseUrl": "https://your-website.com/terms"
+    },
+    "name": {
+        "short": "Support Chatbot",
+        "full": "Support Chatbot for Ticket Management"
+    },
+    "description": {
+        "short": "Easily manage support tickets within Teams.",
+        "full": "A chatbot to raise support tickets directly from Microsoft Teams and integrate with Jira."
+    },
+    "icons": {
+        "color": "icon-color.png",
+        "outline": "icon-outline.png"
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [
+        {
+            "botId": "a7e48570-4fcd-4d8e-a2da-6b93aeb4075a",
+            "scopes": ["personal", "team", "groupchat"],
+            "supportsFiles": false,
+            "isNotificationOnly": false,
+            "commandLists": [
+                {
+                    "scopes": ["personal", "team", "groupchat"],
+                    "commands": [
+                        {
+                            "title": "Hi",
+                            "description": "Say hello to the bot"
+                        },
+                        {
+                            "title": "Help",
+                            "description": "Show available commands"
+                        },
+                        {
+                            "title": "Create Ticket",
+                            "description": "Create a new support ticket."
+                        },
+                        {
+                            "title": "Check Status",
+                            "description": "Check the status of an existing ticket."
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "permissions": ["identity", "messageTeamMembers"],
+    "devicePermissions": ["geolocation", "media", "notifications"],
+    "validDomains": ["https://ticketnator-2.onrender.com"],
+    "webApplicationInfo": {
+        "id": "a7e48570-4fcd-4d8e-a2da-6b93aeb4075a",
+        "resource": "https://api.botframework.com"
+    }
+}
